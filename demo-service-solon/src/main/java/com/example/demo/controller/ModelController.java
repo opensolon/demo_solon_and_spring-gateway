@@ -9,8 +9,6 @@ import org.noear.solon.validation.annotation.Validated;
 @Controller
 @Mapping("/model")
 public class ModelController {
-
-    @Post
     @Mapping("add")
     public Object add(String modelId) {
         return modelId;
