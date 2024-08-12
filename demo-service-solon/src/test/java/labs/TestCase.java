@@ -3,9 +3,6 @@ package labs;
 import org.junit.jupiter.api.Test;
 import org.noear.solon.net.http.HttpUtils;
 
-/**
- * @author noear 2024/8/11 created
- */
 public class TestCase {
     @Test
     public void case_post_json() throws Exception {
