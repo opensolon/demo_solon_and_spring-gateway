@@ -1,0 +1,12 @@
+server:
+  port: 8000
+
+solon:
+  app:
+    name: demo-gateway
+  cloud:
+    gateway:
+      routes:
+        - target: http://localhost:8080
+          predicates:
+            - Path=/demo/**
