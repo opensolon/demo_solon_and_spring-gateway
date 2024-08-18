@@ -10,3 +10,7 @@ solon:
         - target: http://localhost:8080
           predicates:
             - Path=/demo/**
+  logging:
+    logger:
+      "root":
+        level: "INFO"
