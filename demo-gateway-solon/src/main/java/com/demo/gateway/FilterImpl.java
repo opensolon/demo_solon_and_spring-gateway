@@ -7,12 +7,12 @@ import org.noear.solon.cloud.gateway.CloudGatewayFilter;
 import org.noear.solon.cloud.gateway.exchange.ExContext;
 import org.noear.solon.cloud.gateway.exchange.ExFilterChain;
 import org.noear.solon.core.handle.Result;
-import reactor.core.publisher.Mono;
+import org.noear.solon.rx.Completable;
 
 @Component
 public class FilterImpl implements CloudGatewayFilter {
     @Override
-    public Mono<Void> doFilter(ExContext ctx, ExFilterChain chain) {
+    public Completable doFilter(ExContext ctx, ExFilterChain chain) {
         String token = ctx.rawHeader("TOKEN");
 
         if ("test".equals(token)) {
@@ -22,7 +22,7 @@ public class FilterImpl implements CloudGatewayFilter {
             //ctx.newResponse().status(401);
             ctx.newResponse().header("Content-Type", "application/json;charset=UTF-8");
             ctx.newResponse().body(Buffer.buffer(resultStr));
-            return Mono.empty();
+            return Completable.complete();
         }
 
 
