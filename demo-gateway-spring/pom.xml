@@ -4,17 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.noear</groupId>
-        <artifactId>demo_solon_and_spring-gateway</artifactId>
-        <version>dev</version>
-    </parent>
-
+    <groupId>org.noear</groupId>
     <artifactId>demo-gateway-spring</artifactId>
     <version>dev</version>
     <packaging>jar</packaging>
 
     <properties>
+        <maven-compiler.version>3.13.0</maven-compiler.version>
+        <java.version>17</java.version>
         <spring-boot.version>3.3.3</spring-boot.version>
         <spring-cloud.version>2023.0.2</spring-cloud.version>
     </properties>
