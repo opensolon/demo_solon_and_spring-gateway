@@ -3,8 +3,8 @@ package com.demo.gateway;
 
 import org.noear.solon.Solon;
 
-public class DemoGatewayApp {
+public class SolonCloudGatewayApp {
     public static void main(String[] args) {
-        Solon.start(DemoGatewayApp.class, args);
+        Solon.start(SolonCloudGatewayApp.class, args);
     }
 }
